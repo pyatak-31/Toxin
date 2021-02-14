@@ -1,0 +1,21 @@
+include ../utils/mixins
+block config
+    include ../includes/config.pug
+
+doctype html
+html(lang='ru')
+    head
+        meta(charset="utf-8")
+        meta(name="descriprtion", content=descriprtion)
+        meta(name="viewport", content="width=device-width, initial scale=1.0")
+        meta(http-equiv='X-UA-Compatible', content="IE=Edge")
+        <link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon">
+        title #{title}
+
+    body(class=pageClass)
+        include ../header/header
+        main.content-wrapper
+            block content
+        include ../footer/footer
+
+        block script

@@ -1,0 +1,8 @@
+header.header
+    .container
+        span.bag header is here
+        img(src="img/bag.svg")
+
+        ul.list
+                for i in links
+                    +li-a('item', 'link', i)

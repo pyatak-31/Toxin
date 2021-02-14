@@ -1,0 +1,18 @@
+$fontColor: #1b1;
+@import "./utils/fonts.scss";
+@import "./utils/variables.scss";
+
+
+
+
+body {
+    font-family: $mainFont;
+    
+}
+.wrapper {
+    //background-image: url("img/corporate.jpg");
+}
+
+.title {
+    color: $fontColor;
+}

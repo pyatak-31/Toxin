@@ -1,0 +1,7 @@
+mixin item (title, descr)
+    item
+        h1.item-title= title
+        p.item-descr= descr
+mixin li-a(liClass, aClass, arg)
+    li(class=liClass)
+        a(class=aClass)(href=arg.link)= arg.name

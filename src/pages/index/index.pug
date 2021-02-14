@@ -1,0 +1,23 @@
+extends ../../components/layout/main
+
+append config
+    - var title = 'Webpack + Pug'
+    - var description = 'opa'
+    - var pageClass = 'index-page'
+    - var links = [{name: 'Home', link: 'link1.html'}, {name: 'About', link: 'about.html'}, {name: 'Contacts', link: 'link3.html'}]
+
+block content
+    section
+        .container
+            +item('its a pug', 'pug / jade')
+
+            ul.list
+                for i in links
+                    +li-a('item', 'link', i)
+
+            p.wrapper One1, two, #[a.link(href="#") three]
+
+            img(src="img/desert-man.png")
+
+    block script
+       // script(src="assets/js/app.js")
