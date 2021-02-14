@@ -74,7 +74,7 @@ module.exports = {
                 type: 'asset/resource',
                 exclude: /(components|pages)/,
                 generator: {
-                    filename: 'font/[name][ext]'
+                    filename: 'fonts/[name][ext]'
                 },
             },
 
