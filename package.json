@@ -4,7 +4,9 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "cross-env NODE_ENV=production webpack --config config/webpack.production.js",
+    "dev": "cross-env NODE_ENV=development webpack serve --config config/webpack.development.js",
+    "start": "webpack serve --mode development --open --config ./config/webpack.merge.js"
   },
   "author": "Oleg Pyatakov",
   "license": "ISC",
