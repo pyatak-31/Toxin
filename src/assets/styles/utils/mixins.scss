@@ -1,0 +1,14 @@
+@mixin size($width,$height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin themeColor($color, $opacity) {
+    background-color: $color;
+    opacity: $opacity;
+}
+
+@mixin themeFontColor($color, $opacity) {
+    color: $color;
+    opacity: $opacity;
+}

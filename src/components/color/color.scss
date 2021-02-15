@@ -1,0 +1,63 @@
+@import '../../assets/styles/utils/variables.scss';
+@import '../../assets/styles/utils/mixins.scss';
+
+
+.color {
+    display: flex;
+    margin: 20px 0 0 0;
+
+    &__img {
+        @include size(70px);
+        border-radius: 6px;
+
+        &-dark-shade-100 {
+            @include themeColor($mainThemeColor, 100%)
+        }
+
+        &-dark-shade-75 {
+            @include themeColor($mainThemeColor, 75%)
+        }
+
+        &-dark-shade-50 {
+            @include themeColor($mainThemeColor, 50%)
+        }
+
+        &-dark-shade-25 {
+            @include themeColor($mainThemeColor, 25%)
+        }
+
+        &-dark-shade-5 {
+            @include themeColor($mainThemeColor, 5%)
+        }
+
+        &-purple {
+            background-color: $secondThemeColor;
+        }
+
+        &-green {
+            background-color: $thirdThemeColor;
+        }
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 0 0 40px;
+    }
+
+    &__name {
+        font-size: 19px;
+        font-weight: bold;
+        line-height: 28px;
+  
+        span {
+            @include themeFontColor($mainThemeColor, 100%);
+        }
+    }
+
+    &__value {
+        font-size: 19px;
+        line-height: 28px;
+    }
+}

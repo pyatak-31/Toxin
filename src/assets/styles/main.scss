@@ -1,8 +1,16 @@
 $fontColor: #1b1;
 @import "./utils/fonts.scss";
 @import "./utils/variables.scss";
+@import "./utils/normalize.scss";
 
-
+*,
+*:before, 
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: 0;
+}
 
 
 body {

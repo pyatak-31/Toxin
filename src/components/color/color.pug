@@ -1,0 +1,9 @@
+mixin color(colorClass, name, value)
+    div(class="color")
+        div(class=["color__img", "color__img-"+colorClass])
+        
+        div(class="color__description")
+            p(class="color__name")
+                span= name
+
+            p(class="color__value")= value
