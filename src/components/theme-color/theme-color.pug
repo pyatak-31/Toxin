@@ -1,0 +1,9 @@
+mixin themeColor(obj)
+    div(class="color")
+        div(class=["color__img", "color__img-"+obj.class])
+        
+        div(class="color__description")
+            p(class="color__name")
+                span= obj.name
+
+            p(class="color__value")= obj.value

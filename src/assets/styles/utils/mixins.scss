@@ -3,7 +3,7 @@
     height: $height;
 }
 
-@mixin themeColor($color, $opacity) {
+@mixin themeBgColor($color, $opacity) {
     background-color: $color;
     opacity: $opacity;
 }

@@ -1,0 +1,17 @@
+include ../../components/theme-color/theme-color
+
+- 
+    var themeColors = [
+        {class: "dark-shade-100", name: "Dark Shade 100", value: "#1F2041"},
+        {class: "dark-shade-75", name: "Dark Shade 75", value: "#1F2041"},
+        {class: "dark-shade-50", name: "Dark Shade 50", value: "#1F2041"},
+        {class: "dark-shade-25", name: "Dark Shade 25", value: "#1F2041"},
+        {class: "dark-shade-5", name: "Dark Shade 5", value: "#1F2041"},
+        {class: "purple", name: "Purple", value: "#BC9CFF"},
+        {class: "green", name: "Green", value: "#6FCF97"}
+    ];
+
+mixin blockColors(parentClass)
+    div(class=["colors", parentClass+"__colors"])
+            for color in themeColors
+                +themeColor(color)

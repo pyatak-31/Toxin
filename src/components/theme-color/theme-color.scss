@@ -11,23 +11,23 @@
         border-radius: 6px;
 
         &-dark-shade-100 {
-            @include themeColor($mainThemeColor, 100%)
+            @include themeBgColor($mainThemeColor, 100%)
         }
 
         &-dark-shade-75 {
-            @include themeColor($mainThemeColor, 75%)
+            @include themeBgColor($mainThemeColor, 75%)
         }
 
         &-dark-shade-50 {
-            @include themeColor($mainThemeColor, 50%)
+            @include themeBgColor($mainThemeColor, 50%)
         }
 
         &-dark-shade-25 {
-            @include themeColor($mainThemeColor, 25%)
+            @include themeBgColor($mainThemeColor, 25%)
         }
 
         &-dark-shade-5 {
-            @include themeColor($mainThemeColor, 5%)
+            @include themeBgColor($mainThemeColor, 5%)
         }
 
         &-purple {

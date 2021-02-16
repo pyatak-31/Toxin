@@ -1,7 +1,12 @@
 include ../utils/mixins
+//- Раздел для подключения миксинов
+block mixins
+
+//- Раздел для подключения переменных
 block config
     include ../includes/config.pug
 
+//- Общий шаблон страниц
 doctype html
 html(lang='ru')
     head
@@ -12,10 +17,5 @@ html(lang='ru')
         <link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon">
         title #{title}
 
-    body(class=pageClass)
-        include ../header/header
-        main.content-wrapper
-            block content
-        include ../footer/footer
-
-        block script
+    body
+        block content

@@ -17,8 +17,10 @@ body {
     font-family: $mainFont;
     
 }
-.wrapper {
-    //background-image: url("img/corporate.jpg");
+
+.container {
+    max-width: 1920px;
+    padding: 0 150px;
 }
 
 .title {

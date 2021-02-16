@@ -1,25 +1,15 @@
+//- Подключаем главный шаблон
+extends ../../components/layout/main 
 
-- var title = "UI kit"
+append mixins
+    include ../../components/colors/colors
 
-doctype html
-html(lang="ru")
-    head
-        meta(charset="utf-8")
-        meta(name="descriprtion", content=descriprtion)
-        meta(name="viewport", content="width=device-width, initial scale=1.0")
-        meta(http-equiv='X-UA-Compatible', content="IE=Edge")
-        <link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon">
-        title #{title}
+append config
+    - var title = "UI kit"
+    
 
-    body
-        section(class="colors-i-types")
-            .container
-                include ../../components/logo/logo
-                include ../../components/color/color
-                +color("dark-shade-100", "Dark Shade 100", "#1F2041")
-                +color("dark-shade-75", "Dark Shade 75", "#1F2041")
-                +color("dark-shade-50", "Dark Shade 50", "#1F2041")
-                +color("dark-shade-25", "Dark Shade 25", "#1F2041")
-                +color("dark-shade-5", "Dark Shade 5", "#1F2041")
-                +color("purple", "Purple", "#BC9CFF")
-                +color("green", "Green", "#6FCF97")
+block content
+    section(class="colors-i-types")
+        include ../../components/logo/logo
+        div(class="container")
+            +blockColors("colors-i-types")
