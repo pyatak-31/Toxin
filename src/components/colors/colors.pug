@@ -14,4 +14,4 @@ include ../../components/theme-color/theme-color
 mixin blockColors(parentClass)
     div(class=["colors", parentClass+"__colors"])
             for color in themeColors
-                +themeColor(color)
+                +themeColor(color, "colors")

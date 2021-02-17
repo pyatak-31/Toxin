@@ -19,10 +19,15 @@ body {
 }
 
 .container {
-    max-width: 1920px;
-    padding: 0 150px;
+    //max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .title {
     color: $fontColor;
+}
+
+@media (max-width: 1920px) {
+
 }

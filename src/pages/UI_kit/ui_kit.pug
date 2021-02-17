@@ -1,15 +1,23 @@
 //- Подключаем главный шаблон
 extends ../../components/layout/main 
 
-append mixins
+//- Подключаем компоненты
+block components
+    include ../../components/ui-logo/ui-logo
     include ../../components/colors/colors
+    include ../../components/types/types
 
+//- Подключаем переменные
 append config
     - var title = "UI kit"
+    - var description = "Стили компонентов сайта"
+    - var blockClass = "colors-i-types"
     
-
+//- Добавляем уникальный контент
 block content
-    section(class="colors-i-types")
-        include ../../components/logo/logo
-        div(class="container")
-            +blockColors("colors-i-types")
+    section(class=blockClass)
+        div(class=["container", blockClass+"__container"])
+            +uiLogo(blockClass)
+            div(class=[blockClass+"__wrapper"])
+                +blockColors(blockClass)
+                +blockTypes(blockClass)

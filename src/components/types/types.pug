@@ -1,0 +1,14 @@
+include ../../components/theme-type/theme-type
+
+- 
+    var themeTypes = [
+        {tag: "H1", tagClass: "h1", text: "This one is the sub-section or widget title"},
+        {tag: "H2", tagClass: "h2", text: "Next one is the item title inside widgets"},
+        {tag: "H3", tagClass: "h3", text: "This is a label or CTA text"},
+        {tag: "Body", tagClass: "body", text: "This is the body text which is used for most of the design, like paragraphs, lists, etc."},
+    ];
+
+mixin blockTypes(parentClass)
+    div(class=["types", parentClass+"__types"])
+            for type in themeTypes
+                +themeType(type, "types")

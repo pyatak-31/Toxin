@@ -1,0 +1,5 @@
+mixin themeType(obj, parentClass)
+    div(class=["theme-type", parentClass+"__theme-type"])
+        p(class=["theme-type__tag", "theme-type__tag-"+obj.tagClass])= obj.tag
+        
+        p(class=["theme-type__text", "theme-type__text-"+obj.tagClass])= obj.text

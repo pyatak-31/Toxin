@@ -1,9 +1,9 @@
-mixin themeColor(obj)
-    div(class="color")
-        div(class=["color__img", "color__img-"+obj.class])
+mixin themeColor(obj, parentClass)
+    div(class=["theme-color", parentClass+"__theme-color"])
+        div(class=["theme-color__img", "theme-color__img-"+obj.class])
         
-        div(class="color__description")
-            p(class="color__name")
+        div(class="theme-color__description")
+            p(class="theme-color__name")
                 span= obj.name
 
-            p(class="color__value")= obj.value
+            p(class="theme-color__value")= obj.value
