@@ -1,62 +1,62 @@
+// Подключаем файлы с переменными и миксинами
 @import '../../assets/styles/utils/variables.scss';
 @import '../../assets/styles/utils/mixins.scss';
 
+// Стили
 .theme-type {
     display: flex;
-    //justify-content: space-between;
-    
 
     &__tag {
         width: 30px;
         margin: 0 30px 0 0;
         text-align: right;
-        @include themeFontColor($mainThemeColor, 0.25);
+        color: $mainThemeColor25;
 
         &-h1 {
-            font-size: 24px;
-            line-height: 29px;
+            @include respProperty("font-size", 22, 24);
+            line-height: 120%;
         }
 
         &-h2 {
-            font-size: 19px;
-            line-height: 23px;
+            @include respProperty("font-size", 17, 19);
+            line-height: 120%;
         }
 
         &-h3 {
-            font-size: 12px;
-            line-height: 15px;
+            @include respProperty("font-size", 11, 12);
+            line-height: 120%;
         }
 
         &-body {
-            font-size: 14px;
-            line-height: 24px;
+            @include respProperty("font-size", 13, 14);
+            line-height: 170%;
         }
     }
 
     &__text {
-        @include themeFontColor($mainThemeColor, 1);
+        color: $mainThemeColor100;
         font-weight: bold;
 
         &-h1 {
-            font-size: 24px;
-            line-height: 29px;
+            @include respProperty("font-size", 22, 24);
+            line-height: 120%;
         }
 
         &-h2 {
-            font-size: 19px;
-            line-height: 23px;
+            @include respProperty("font-size", 17, 19);
+            line-height: 120%;
         }
 
         &-h3 {
             text-transform: uppercase;
-            font-size: 12px;
-            line-height: 15px;
+            @include respProperty("font-size", 11, 12);
+            line-height: 120%;
         }
 
         &-body {
-            @include themeFontColor($mainThemeColor, 0.75);
-            font-size: 14px;
-            line-height: 24px;
+            color: $mainThemeColor75;
+            @include respProperty("font-size", 13, 14);
+            line-height: 170%;
             font-weight: normal;
         }
     }

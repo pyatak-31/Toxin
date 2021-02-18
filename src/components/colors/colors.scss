@@ -1,7 +1,17 @@
+// Подключаем файл с переменными
+@import '../../assets/styles/utils/variables.scss';
+
+// Стили
 .colors {
-    width: 280px;
+    width: 24.7%;
 
     &__theme-color:not(:first-child) {
         margin: 20px 0 0 0;
+    }
+}
+
+@media (max-width: $screen-sm-max) {
+    .colors {
+        width: 100%;
     }
 }

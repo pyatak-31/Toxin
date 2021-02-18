@@ -1,0 +1,19 @@
+//- Подключаем компоненты:
+//- компонент логтипа
+include ../ui-logo/ui-logo
+//- компонент элементов цветов
+include ../colors/colors
+//- компонент элементов типографики
+include ../types/types
+
+//- Класс блока
+- var blockClass = "colors-i-types"
+
+//- компонент блок элементов цветов и типографики
+mixin blockColorsITypes()
+    section(class=blockClass)
+        div(class=["container", blockClass+"__container"])
+            +uiLogo(blockClass)
+            div(class=[blockClass+"__wrapper"])
+                +blockColors(blockClass)
+                +blockTypes(blockClass)

@@ -1,32 +1,36 @@
+//Подключаем файлы с переменными и миксинами
 @import '../../assets/styles/utils/variables.scss';
 @import '../../assets/styles/utils/mixins.scss';
 
-
+// Стили
 .theme-color {
     display: flex;
 
     &__img {
-        @include size(70px);
+        min-width: 70px;
+        max-width: 70px;
+        min-height: 70px;
+        max-height: 70px;
         border-radius: 6px;
 
         &-dark-shade-100 {
-            @include themeBgColor($mainThemeColor, 1)
+            background-color: $mainThemeColor100;
         }
 
         &-dark-shade-75 {
-            @include themeBgColor($mainThemeColor, 0.75)
+            background-color: $mainThemeColor75;
         }
 
         &-dark-shade-50 {
-            @include themeBgColor($mainThemeColor, 0.5)
+            background-color: $mainThemeColor50;
         }
 
         &-dark-shade-25 {
-            @include themeBgColor($mainThemeColor, 0.25)
+            background-color: $mainThemeColor25;
         }
 
         &-dark-shade-5 {
-            @include themeBgColor($mainThemeColor, 0.05)
+            background-color: $mainThemeColor5;
         }
 
         &-purple {
@@ -46,17 +50,17 @@
     }
 
     &__name {
-        font-size: 19px;
+        @include respProperty("font-size", 17, 19);
         font-weight: bold;
-        line-height: 28px;
+        line-height: 150%;
   
         span {
-            @include themeFontColor($mainThemeColor, 1);
+            color: $mainThemeColor100;
         }
     }
 
     &__value {
-        font-size: 19px;
-        line-height: 28px;
+        @include respProperty("font-size", 17, 19);
+        line-height: 150%;
     }
 }

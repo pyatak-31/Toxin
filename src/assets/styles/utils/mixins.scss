@@ -1,14 +1,17 @@
+@import './variables.scss';
+
 @mixin size($width,$height: $width) {
     width: $width;
     height: $height;
 }
 
-@mixin themeBgColor($color, $opacity) {
-    background-color: $color;
-    opacity: $opacity;
-}
-
-@mixin themeFontColor($color, $opacity) {
-    color: $color;
-    opacity: $opacity;
+// Задаем свойство, минимальное значение, значение для макс. высоты, выборочный параметр определяющий направление
+@mixin respProperty($property, $minValue, $maxValue, $side: 0) {
+    @if $side == "h" {
+        #{$property}: calc(#{$minValue + px} + (#{$maxValue} - #{$minValue}) * ((100vw - 320px) / (#{$maxPageWidth - 320}))) 0;
+    } @else if $side == "w" {
+        #{$property}: 0 calc(#{$minValue + px} + (#{$maxValue} - #{$minValue}) * ((100vw - 320px) / (#{$maxPageWidth - 320})));
+    } @else {
+        #{$property}: calc(#{$minValue + px} + (#{$maxValue} - #{$minValue}) * ((100vw - 320px) / (#{$maxPageWidth - 320})));
+    }
 }

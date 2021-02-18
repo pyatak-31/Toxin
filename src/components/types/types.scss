@@ -1,7 +1,18 @@
+// Стили
 .types {
-    width: 435px;
+    width: 38.1%;
     
     &__theme-type:not(:first-child) {
         margin: 50px 0 0 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .types {
+        width: 100%;
+
+        &__theme-type:first-child {
+            margin: 50px 0 0 0;
+        }
     }
 }

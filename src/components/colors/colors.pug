@@ -1,5 +1,7 @@
+//- Подключаем компонент цвета
 include ../../components/theme-color/theme-color
 
+//- Создаем массив с данными для компонента цвета
 - 
     var themeColors = [
         {class: "dark-shade-100", name: "Dark Shade 100", value: "#1F2041"},
@@ -11,6 +13,7 @@ include ../../components/theme-color/theme-color
         {class: "green", name: "Green", value: "#6FCF97"}
     ];
 
+//- Компонент блока со всеми цветами
 mixin blockColors(parentClass)
     div(class=["colors", parentClass+"__colors"])
             for color in themeColors

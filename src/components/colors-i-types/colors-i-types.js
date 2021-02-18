@@ -1,2 +1,2 @@
 // Подключаем файл со стилями
-import "./theme-type.scss"
+import "./colors-i-types.scss"

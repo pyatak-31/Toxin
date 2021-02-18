@@ -3,21 +3,16 @@ extends ../../components/layout/main
 
 //- Подключаем компоненты
 block components
-    include ../../components/ui-logo/ui-logo
-    include ../../components/colors/colors
-    include ../../components/types/types
+    //- компонент блок с элементами цветов и типографики
+    include ../../components/colors-i-types/colors-i-types
+
 
 //- Подключаем переменные
 append config
     - var title = "UI kit"
     - var description = "Стили компонентов сайта"
-    - var blockClass = "colors-i-types"
+   
     
 //- Добавляем уникальный контент
 block content
-    section(class=blockClass)
-        div(class=["container", blockClass+"__container"])
-            +uiLogo(blockClass)
-            div(class=[blockClass+"__wrapper"])
-                +blockColors(blockClass)
-                +blockTypes(blockClass)
+    +blockColorsITypes()

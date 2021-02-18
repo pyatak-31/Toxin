@@ -1,0 +1,32 @@
+// Подключаем файлы с переменными и миксинами
+@import '../../assets/styles/utils/variables.scss';
+@import '../../assets/styles/utils/mixins.scss';
+
+// Стили
+.colors-i-types {
+
+    &__ui-logo {}
+
+    &__container {
+       @include respProperty("padding", 10, 30);
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin: 65px 0 0 0;
+        @include respProperty("padding", 20, 120, "w");
+        
+    }
+
+    &__colors {}
+}
+
+@media (max-width: 767px) {
+    .colors-i-types {
+        &__wrapper {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
